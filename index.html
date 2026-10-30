@@ -1,0 +1,240 @@
+<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>TM103 مراجعة الميد</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;600;700&display=swap">
+<style>
+:root{--bg:#f3f5f8;--sf:#fff;--ink:#17202b;--mut:#5a6573;--ln:#d6dce3;--ac:#1d5fc4;--as:#e3ecfa;--ok:#1d7f52;--okb:#e1f3ea;--no:#b8362f;--nob:#fbe5e3;--cb:#e8ecf0;color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0f1419;--sf:#161d26;--ink:#e3e8ee;--mut:#97a3b1;--ln:#2a3441;--ac:#6fa6ff;--as:#1a2a44;--ok:#4cc28a;--okb:#132b21;--no:#f07b72;--nob:#331917;--cb:#1d2530;color-scheme:dark}}
+:root[data-theme=dark]{--bg:#0f1419;--sf:#161d26;--ink:#e3e8ee;--mut:#97a3b1;--ln:#2a3441;--ac:#6fa6ff;--as:#1a2a44;--ok:#4cc28a;--okb:#132b21;--no:#f07b72;--nob:#331917;--cb:#1d2530;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.8 "IBM Plex Sans Arabic",system-ui,Tahoma,sans-serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--sf);z-index:10}
+[hidden]{display:none!important}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:11;background:var(--sf);border-bottom:1px solid var(--ln);display:flex;gap:4px;overflow-x:auto;padding:6px 10px}
+nav a{padding:6px 12px;border-radius:8px;color:var(--mut);text-decoration:none;white-space:nowrap;font-weight:600}
+nav a.on{background:var(--as);color:var(--ac)}
+main{max-width:860px;margin:0 auto;padding:16px}
+h1{font-size:22px;margin:8px 0}h2{font-size:18px;margin:20px 0 8px}
+.card,details,.box{background:var(--sf);border:1px solid var(--ln);border-radius:12px;padding:12px 14px;margin:10px 0}
+summary{cursor:pointer;font-weight:700}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em;background:var(--cb);padding:1px 6px;border-radius:5px;direction:ltr;unicode-bidi:isolate}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid var(--ln);padding:6px 8px;text-align:center}
+.sc{overflow-x:auto}
+button,input{font:inherit;color:inherit}
+button{border:1px solid var(--ln);background:var(--sf);border-radius:10px;padding:8px 12px;cursor:pointer}
+.o{display:block;width:100%;margin:6px 0;text-align:start;direction:ltr}
+.chips{display:flex;flex-wrap:wrap;gap:6px}.chips .on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.row{display:flex;gap:6px;margin-top:8px}
+input{flex:1;min-width:0;border:1px solid var(--ln);background:var(--bg);border-radius:10px;padding:8px 12px}
+input.bad{border-color:var(--no)}
+.right{background:var(--okb);border-color:var(--ok)}.wrong{background:var(--nob);border-color:var(--no)}
+.card.ok{border-color:var(--ok)}.card.no{border-color:var(--no)}
+.sol{margin-top:10px;padding:10px;border-radius:8px;background:var(--as)}
+.km{width:auto;direction:ltr;margin:8px 0}.q{font-weight:600}
+.mut{color:var(--mut)}
+header{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;padding:10px 14px;background:var(--sf);border-bottom:1px solid var(--ln)}header b{font-size:18px}#cd{color:var(--mut)}#cd b{color:var(--ac);font-size:inherit}
+</style></head><body>
+<header><b>TM103 · مراجعة الميد</b><span id="cd"></span><button id="lg" onclick="lang()">English</button></header>
+<nav><a href="#home">البداية</a><a href="#tree">شجرة المذاكرة</a><a href="#lessons">الدروس</a><a href="#rules">مرجع سريع</a><a href="#bank">بنك الأسئلة</a><a href="#trace">تتبّع الدوائر</a><a href="#cmp">قارن بين</a><a href="#fill">أكمل الفراغ</a><a href="#practice">اكتب الحل</a><a href="#mock">اختبار تجريبي</a></nav>
+<main>
+<section id="v-home">
+<h1>TM103 — مراجعة الميد (الفصول 1–3)</h1>
+<p>موعد الميد: <b>الثلاثاء 3 نوفمبر</b></p>
+<p class="mut">مبنية على حوالي 10 امتحانات سابقة (2021 إلى 2026). الأرقام تقريبية، فتأكد من توزيع الدرجات مع الدكتور.</p>
+<div class="box sc"><table>
+<tr><th>نوع السؤال</th><th>الدرجات</th><th>الظهور</th></tr>
+<tr><td>MCQ (5×2) أو صح/خطأ (10×1)</td><td>10</td><td>كل امتحان</td></tr>
+<tr><td>تحويل الأنظمة (4 فقرات)</td><td>10–15</td><td>تقريبًا كل امتحان</td></tr>
+<tr><td>أعداد بإشارة 8-bit: SM / C1 / C2 (تمثيل أو فك)</td><td>8–14</td><td>معظم الامتحانات</td></tr>
+<tr><td>Floating point excess-16</td><td>7</td><td>معظم الامتحانات</td></tr>
+<tr><td>K-map: SOP ← تجميع ← تبسيط (+ رسم دائرة)</td><td>12–14</td><td>تقريبًا كل امتحان</td></tr>
+<tr><td>Truth tables: half/full adder، NAND/NOR، XOR، تحقق من complement</td><td>4–10</td><td>كثير</td></tr>
+<tr><td>قراءة دائرة: اكتب المعادلة واحسب الخرج</td><td>6–10</td><td>كثير</td></tr>
+</table></div>
+<p>آخر امتحان (Spring 25-26) كان أقصر: 5 MCQ (5 درجات) + 6 أسئلة (25 درجة): جدول حقيقة، فك FP، SM/C1/C2، De Morgan، تحويل أنظمة، K-map مع رسم الدائرة.</p>
+<h2>ترتيب المذاكرة المقترح</h2>
+<ol><li>الدرجات المضمونة: تحويل الأنظمة، SM/C1/C2، FP. كلها خطوات ميكانيكية، تدرّب عليها بالمولّد.</li>
+<li>K-map وجداول الحقيقة وDe Morgan.</li>
+<li>قراءة الدوائر، ثم MCQ الفصل الأول (الوحدات، المستويات، الـ ports) وسلوك الـ flip-flops.</li></ol>
+</section>
+
+<section id="v-rules" hidden>
+<h1>قواعد سريعة</h1>
+<details><summary>الفصل 1: الوحدات والمستويات</summary>
+<p>K = 2¹⁰ للسعة (KB)، و k = 10³ للسرعة (kbps). كذلك M = 2²⁰ / 10⁶، G = 2³⁰ / 10⁹، T = 2⁴⁰ / 10¹². السعة بقوى 2، والتردد ومعدل البيانات بقوى 10.<br>
+الأجزاء: milli = 10⁻³، micro (µ) = 10⁻⁶، nano = 10⁻⁹، pico = 10⁻¹². إذن 1 ms = 1000 µs.<br>
+B = byte = 8 bits، nibble = 4 bits، word = مجموعة بايتات (16/32/64 bit). مثال: 100KB بالبت = 100×2¹⁰×8 = 819,200.<br>
+المستويات: <code>6</code> User، <code>5</code> High-level language، <code>4</code> Assembly، <code>3</code> System software، <code>2</code> ISA (Machine level)، <code>1</code> Control، <code>0</code> Digital logic.<br>
+Serial: نبضات على خط أو خطين (بطيء). Parallel: 8 خطوط أو أكثر (أسرع). USB: serial ذكي، self-configuring، plug and play، وهو الأسرع. السرعة تُقاس بـ GHz.<br>
+هيئات المعايير: IEEE, ITU, ANSI, BSI, ISO.</p></details>
+<details><summary>الفصل 2: تحويل الأنظمة</summary>
+<p><b>عشري ← نظام آخر:</b> الجزء الصحيح: اقسم على الأساس واقرأ الباقي من الأسفل للأعلى. الكسر: اضربه في الأساس وخذ الخانة الصحيحة تباعًا.<br>
+<b>نظام ← عشري:</b> اضرب كل خانة في الأساس<sup>k</sup> (0 قبل الفاصلة ثم −1، −2 بعدها) واجمع.<br>
+<b>ثنائي ↔ ثماني:</b> 3 بتات لكل خانة. <b>ثنائي ↔ سداسي عشري:</b> 4 بتات. التجميع يبدأ من الفاصلة: يميناً للجزء الصحيح، ويساراً للكسر مع إكمال أصفار.<br>
+<b>ثماني ↔ سداسي عشري:</b> عبر الثنائي. مثال: <code>(A1)₁₆ = 10100001 = (241)₈</code>.</p></details>
+<details><summary>الفصل 2: الأعداد بإشارة (8-bit)</summary>
+<p><b>SM:</b> أول بت للإشارة (1 = سالب) والباقي magnitude. <b>C1:</b> اقلب كل بتات العدد الموجب. <b>C2:</b> C1 + 1. الأعداد الموجبة تتطابق في الأنظمة الثلاثة.<br>
+مثال −62: SM <code>10111110</code>، C1 <code>11000001</code>، C2 <code>11000010</code>.<br>
+<b>فك عدد سالب:</b> SM: تجاهل أول بت واقرأ الباقي. C1: اقلب ثم اقرأ. C2: اقلب ثم أضف 1. مثال <code>11100011</code>: SM = −99، C1 = −28، C2 = −29.<br>
+Unsigned: اقرأ كل البتات كعدد موجب (<code>10111001</code> = 185).</p></details>
+<details><summary>الفصل 2: Floating point (excess-16)</summary>
+<p>الصيغة 14-bit: <code>1</code> بت إشارة | <code>5</code> بت أُس | <code>8</code> بت significand.<br>
+1) حوّل |العدد| إلى ثنائي. 2) طبّعه إلى <code>0.1xxx × 2ᵉ</code> (أول خانة بعد الفاصلة 1). 3) الأُس = e + 16 في 5 بت. 4) الـ significand أول 8 خانات بعد الفاصلة (أكمل أصفارًا). 5) الإشارة: 0 موجب، 1 سالب.<br>
+مثال −77.5: <code>1001101.1</code> = 0.10011011×2⁷ ← الأُس 23 = 10111 ← <code>1 10111 10011011</code>.<br>
+الأعداد الأصغر من 1 لها e سالب: 0.25 = 0.1×2⁻¹ ← الأُس 15 = <code>01111</code>.</p></details>
+<details><summary>الفصل 3: Boolean وDe Morgan</summary>
+<p>AND = 1 فقط إذا كل المدخلات 1. OR = 0 فقط إذا كل المدخلات 0. NAND = 0 فقط إذا كل المدخلات 1. NOR = 1 فقط إذا كل المدخلات 0. XOR = 1 إذا اختلف المدخلان. الأولوية: الأقواس ثم NOT ثم AND ثم OR.<br>
+<b>De Morgan:</b> <code>(A+B)' = A'B'</code> و <code>(AB)' = A'+B'</code>. لإيجاد متمم عبارة: اقلب كل متغير، وبدّل + بـ · والعكس. مثال <code>(z + x'y)' = z'(x + y')</code>.<br>
+دالة بـ n متغير لها 2ⁿ minterm. من جدول الحقيقة: لكل صف خرجه 1 اكتب minterm (1 ← x، 0 ← x').</p></details>
+<details><summary>الفصل 3: K-map</summary>
+<p>ترتيب الأعمدة Gray: <code>y'z'</code> <code>y'z</code> <code>yz</code> <code>yz'</code>. جمّع الواحدات في مستطيلات أحجامها 1 أو 2 أو 4 أو 8، ويجوز اللف حول الأطراف. اختر أكبر المجموعات وأقل عدد منها، وتغطي كل 1. المتغير الذي يتغير داخل المجموعة يختفي.<br>
+مثال: صف x' كله 1 في العمودين <code>yz</code> و <code>yz'</code> ← الناتج <code>x'y</code>.</p></details>
+<details><summary>الفصل 3: الدوائر</summary>
+<p><b>Half adder:</b> Sum = x⊕y، Carry = xy. <b>Full adder:</b> 3 مدخلات (x, y, Cin): Sum = 1 عند عدد فردي من الواحدات، Carry = 1 عند واحدين أو أكثر.<br>
+<b>Decoder:</b> n مدخل ← 2ⁿ مخرج، واحد فقط فعّال. <b>Multiplexer:</b> 2ⁿ مدخل ← خرج واحد بـ n selector.<br>
+Combinational: لا ذاكرة، الخرج من المدخلات الحالية. Sequential: له ذاكرة وfeedback وclock.<br>
+Counter من n flip-flop يعدّ 2ⁿ حالة. Register يخزّن بيانات بـ D flip-flops.</p>
+<div class="sc"><table><tr><th>المدخلان</th><th>SR (S,R)</th><th>JK (J,K)</th></tr>
+<tr><td>00</td><td><code>Q(t)</code></td><td><code>Q(t)</code></td></tr>
+<tr><td>01</td><td>0</td><td>0</td></tr>
+<tr><td>10</td><td>1</td><td>1</td></tr>
+<tr><td>11</td><td>غير معرّف</td><td><code>Q'(t)</code></td></tr></table></div>
+<p>JK يُفضَّل على SR لأنه يحل حالة 11 غير المعرّفة. D flip-flop: <code>Q(t+1) = D</code>.</p></details>
+</section>
+
+<section id="v-practice" hidden>
+<h1>تدرّب</h1>
+<p class="mut">أسئلة عشوائية بأعداد جديدة كل مرة. الأجوبة يحسبها الكود، والحل يُظهر الخطوات.</p>
+<div class="chips" id="chips"></div>
+<div id="pq"></div>
+<button onclick="pick(cur)">سؤال جديد ↻</button>
+<p class="mut">بتات الإجابة بدون مسافات، وصيغة K-map مثل <code>y + xz'</code>.</p>
+</section>
+
+<section id="v-mcq" hidden><h1>بنك MCQ</h1><div id="ml"></div></section>
+<section id="v-tree" hidden><h1>شجرة المذاكرة</h1><p class="mut">علّم ما أنهيته، ويُحفظ تقدمك في المتصفح. أنجزت: <b id="pg"></b></p><div id="tr"></div></section>
+<section id="v-cmp" hidden><h1>قارن بين</h1><div id="cp"></div></section>
+<section id="v-fill" hidden><h1>أكمل الفراغ</h1><div id="fl"></div></section>
+<section id="v-trace" hidden><h1>تتبّع الدوائر</h1><p class="mut">كل سؤال دائرة من 3 بوابات، احسب الخرج F خطوة بخطوة.</p><div id="tq"></div><button onclick="INIT.trace(1)">أسئلة جديدة ↻</button></section>
+<section id="v-lessons" hidden><h1>الدروس</h1><p class="mut">أمثلة محلولة خطوة بخطوة من نوع أسئلة امتحاناتك.</p><div id="ls"></div></section>
+<section id="v-bank" hidden><h1>بنك الأسئلة</h1><h2>MCQ</h2><div id="bm"></div><h2>من الامتحانات السابقة</h2><div id="bk"></div></section>
+
+<section id="v-mock" hidden>
+<h1>اختبار تجريبي</h1>
+<p>النتيجة: <b id="sc">0</b> / <b id="tot">10</b> · الوقت: <b id="tm">0:00</b> <button onclick="mock()">اختبار جديد ↻</button></p>
+<div id="mk"></div>
+</section>
+</main>
+<script>
+//PURE
+const R=n=>Math.floor(Math.random()*n),P=a=>a[R(a.length)],G={},C=s=>`<code>${s}</code>`,sub=b=>`<sub>${b}</sub>`;
+const NM={SM:"Signed Magnitude",C1:"One’s Complement",C2:"Two’s Complement"};
+const tb=(x,b)=>{let i=Math.floor(x),f=x-i,s=i.toString(b).toUpperCase();if(f){s+='.';for(let k=0;f&&k<12;k++){f*=b;const d=Math.floor(f);s+=d.toString(b).toUpperCase();f-=d}}return s};
+const fb=(s,b)=>{const[a,c='']=s.split('.');let v=parseInt(a,b);[...c].forEach((d,k)=>v+=parseInt(d,b)/b**(k+1));return v};
+const okc=(s,b,v)=>{s=s.toUpperCase().replace(/[\s()]/g,'');return /^[0-9A-F]+(\.[0-9A-F]+)?$/.test(s)&&Math.abs(fb(s,b)-v)<1e-9};
+const bin8=n=>(n&255).toString(2).padStart(8,'0');
+G.conv=()=>{const[f,t]=P([[10,2],[2,8],[16,10],[16,8],[8,16],[10,8],[2,16],[10,16]]);
+ const v=(f==10?20+R(230):16+R(200))+P([0,.25,.5,.75,.125]);
+ const how=f==10?`الجزء الصحيح: اقسم على ${t} وخذ الباقي من الأسفل للأعلى. الكسر: اضربه في ${t} وخذ الخانة الصحيحة تباعًا.`:t==10?`اضرب كل خانة في ${f}<sup>k</sup> (0 قبل الفاصلة، ثم −1، −2…) واجمع.`:f!=2&&t!=2?`مرّ بالثنائي: ${C(tb(v,2))} ثم جمّع البتات.`:`جمّع البتات من الفاصلة: ${t==8||f==8?3:4} بتات لكل خانة.`;
+ return{t:`حوّل: ${C('('+tb(v,f)+')')}${sub(f)} = ( ? )${sub(t)}`,a:s=>okc(s,t,v),s:`الجواب: ${C(tb(v,t))}<br>${how}`}};
+G.rep=()=>{const n=-(8+R(112)),k=P(['SM','C1','C2']),r={SM:'1'+(-n).toString(2).padStart(7,'0'),C1:bin8(n-1),C2:bin8(n)};
+ return{t:`مثّل العدد ${C(n)} بنظام 8-bit ${NM[k]}`,a:s=>s.replace(/\s/g,'')==r[k],s:`SM: ${C(r.SM)} — C1: ${C(r.C1)} — C2: ${C(r.C2)}<br>ثنائي ${-n} = ${C(bin8(-n))}. SM: بدّل أول بت إلى 1. C1: اقلب كل البتات. C2: C1 + 1.`}};
+G.dec=()=>{const b=129+R(126),k=P(['SM','C1','C2']),v={SM:-(b&127),C1:-((~b)&255),C2:b-256}[k];
+ return{t:`ما القيمة العشرية للعدد ${C(bin8(b))} إذا كان النظام ${NM[k]}؟`,a:s=>s.trim()!==''&&+s==v,s:`الجواب: ${C(v)}<br>${{SM:'تجاهل بت الإشارة واقرأ الباقي ثم ضع سالب.',C1:'اقلب كل البتات واقرأ القيمة ثم ضع سالب.',C2:'اقلب البتات وأضف 1 ثم ضع سالب.'}[k]}`}};
+const fpv=x=>{let a=Math.abs(x),e=0;while(a>=1){a/=2;e++}while(a<.5){a*=2;e--}let m='';for(let i=0;i<8;i++){a*=2;m+=a>=1?1:0;a%=1}return{s:+(x<0),E:(e+16).toString(2).padStart(5,'0'),m,e}};
+const rx=()=>(R(2)?-1:1)*(4+R(60)+P([0,.5,.25,.75]));
+G.fp=()=>{const x=rx(),f=fpv(x);return{t:`مثّل ${C(x)} بصيغة Floating point 14-bit (excess-16): بت إشارة | 5 بت أُس | 8 بت significand`,a:s=>s.replace(/\s/g,'')==f.s+f.E+f.m,s:`${C(f.s+' '+f.E+' '+f.m)}<br>ثنائي ${C(tb(Math.abs(x),2))} = 0.${f.m} × 2<sup>${f.e}</sup>. الأُس = ${f.e} + 16 = ${f.e+16} = ${C(f.E)}. الإشارة ${f.s}.`}};
+G.fpd=()=>{const x=rx(),f=fpv(x);return{t:`ما القيمة العشرية للتمثيل (excess-16): ${C(f.s+' '+f.E+' '+f.m)}`,a:s=>s.trim()!==''&&Math.abs(+s-x)<1e-9,s:`الأُس = ${parseInt(f.E,2)} − 16 = ${f.e} ← 0.${f.m} × 2<sup>${f.e}</sup>: حرّك الفاصلة ${f.e} خانات = ${C(tb(Math.abs(x),2))} = ${Math.abs(x)}، والإشارة ${f.s?'سالبة':'موجبة'} ← ${C(x)}`}};
+const cubes=[];for(let x=0;x<3;x++)for(let y=0;y<3;y++)for(let z=0;z<3;z++)cubes.push([x,y,z]);
+const cov=c=>{const r=[];for(let m=0;m<8;m++){const b=[m>>2&1,m>>1&1,m&1];if(c.every((v,i)=>v==2||v==b[i]))r.push(m)}return r};
+const term=c=>c.map((v,i)=>v==2?'':'xyz'[i]+(v?'':"'")).join('')||'1';
+function solve(S){const v=cubes.filter(c=>cov(c).every(m=>S.includes(m))),pr=v.filter(c=>!v.some(d=>d!=c&&cov(d).length>cov(c).length&&cov(c).every(m=>cov(d).includes(m))));
+ let best=null,n=0;for(let k=1;k<1<<pr.length;k++){const ch=pr.filter((_,i)=>k>>i&1),u=new Set(ch.flatMap(cov));if(S.every(m=>u.has(m))){const cost=ch.length*10+ch.reduce((a,c)=>a+c.filter(q=>q<2).length,0);if(!best||cost<best.cost){best={cost,ch};n=1}else if(cost==best.cost)n++}}return{ch:best.ch,n}}
+const nt=s=>s.replace(/^[^=]*=/,'').replace(/[’‘`′]/g,"'").replace(/\s/g,'').toLowerCase().split('+').map(t=>(t.match(/[xyz]'?/g)||[]).sort().join('')).sort().join('+');
+const km=S=>`<table class="km"><tr><th></th>${["y'z'","y'z","yz","yz'"].map(h=>`<th>${h}</th>`).join('')}</tr>${[0,1].map(x=>`<tr><th>${x?'x':"x'"}</th>${[0,1,3,2].map(c=>`<td>${S.includes(x*4+c)?1:0}</td>`).join('')}</tr>`).join('')}</table>`;
+G.km=()=>{let S,r;do{S=[0,1,2,3,4,5,6,7].sort(()=>Math.random()-.5).slice(0,3+R(4));r=solve(S)}while(r.n>1);S.sort((a,b)=>a-b);const f=r.ch.map(term).join(' + ');
+ return{t:`للدالة F(x,y,z) الـ K-map التالي. اكتب الشكل المبسط (SOP):${km(S)}`,a:s=>nt(s)==nt(f),s:`${C('F = '+f)}<br>قبل التبسيط: ${C(S.map(m=>term([m>>2&1,m>>1&1,m&1])).join(' + '))}<br>المجموعات: ${r.ch.map(c=>`${C(term(c))} (${cov(c).length} خانات)`).join('، ')}`}};
+const cm=l=>l.endsWith("'")?l[0]:l+"'";
+G.dm=()=>{const tm=()=>[...'abc'].sort(()=>Math.random()-.5).slice(0,1+R(2)).map(c=>c+(R(2)?"'":''));let U;do{U=[tm(),tm()]}while(!U.some(t=>t.length>1));
+ const ex=U.map(t=>t.join('')).join(' + '),A=U.map(t=>t.length>1?'('+t.map(cm).join(' + ')+')':cm(t[0])).join('·'),
+ B=U.map(t=>t.map(cm).join('')).join(' + '),X=U.map(t=>t.length>1?'('+t.join(' + ')+')':t[0]).join('·'),D=U.map(t=>t.length>1?'('+t.map(cm).join('')+')':cm(t[0])).join('·');
+ const o=[A,B,X,D].map((s,i)=>[s,i]).sort(()=>Math.random()-.5);
+ return{t:`<div dir="ltr">What is the complement of ${C(ex)} ?</div>`,o:o.map(x=>C(x[0])),a:o.findIndex(x=>x[1]==0),s:`De Morgan: اقلب كل متغير وبدّل + بـ · والعكس ← ${C(A)}`}};
+const M=(t,o,a,s)=>({t:`<div dir="ltr">${t}</div>`,o,a,s});
+const BANK=[
+M("For a NOR gate, the output will be 0 if:",["All inputs are 0","One of the inputs is 1","All inputs are 1","Both b and c"],3,"NOR = 1 فقط إذا كانت كل المدخلات 0، وفي غير ذلك 0."),
+M("For a 2-input XOR gate, the output will be 0 if:",["The inputs are different","The inputs are equal","Only one input is 1","None of the choices"],1,"XOR = 1 عندما يختلف المدخلان."),
+M("For a NAND gate, the output will be 0 if:",["All inputs are 1","All inputs are 0","Any input is 0","Any input is 1"],0,"NAND عكس AND: يكون 0 فقط عندما تكون كل المدخلات 1."),
+M("In the JK flip-flop, if J=1, K=1 then:",["Q(t+1)=0","Q(t+1)=1","Q(t+1)=Q'(t)","Q(t+1) is unknown"],2,"في JK الحالة 11 تقلب الخرج (toggle)، وليست غير معرّفة كما في SR."),
+M("In the JK flip-flop, if J=0, K=1 then:",["Q(t+1) is unknown","Q(t+1)=Q'(t)","Q(t+1)=1","None of the choices"],3,"K=1 مع J=0 يعني reset فيصبح الخرج 0، وهو غير موجود بين الخيارات."),
+M("A multiplexer with 60 inputs needs at least:",["4 selectors","6 selectors","8 selectors","16 selectors"],1,"نحتاج 2ⁿ ≥ 60 فـ n = 6 (2⁶ = 64)."),
+M("A decoder with 64 outputs has:",["64 inputs","16 inputs","6 inputs","4 inputs"],2,"n مدخل ← 2ⁿ مخرج، و2⁶ = 64."),
+M("A 500K Bytes RAM module consists of ___ bits:",["500*10³","500*2²³","5*2²⁵","500*2¹³"],3,"500K بايت = 500×2¹⁰ بايت، وكل بايت 2³ بت ← 500×2¹³."),
+M("0.1 milliseconds are equivalent to:",["1*10⁻² microseconds","1*10⁻⁵ microseconds","1*10² microseconds","0.1*2¹⁰ microseconds"],2,"1 ms = 1000 µs، فـ 0.1 ms = 100 µs."),
+M("A 100KB file is equal, in bits, to:",["0.8 Mbits","100,000 bits","800,000 bits","None of the above"],3,"100×2¹⁰×8 = 819,200 بت (السعة بقوى 2)، ولا يطابق أي خيار."),
+M("In the Computer Level Hierarchy, which level is the Machine Level (ISA)?",["Level 4","Level 2","Level 3","Level 6"],1,"0 Digital logic، 1 Control، 2 ISA، 3 System، 4 Assembly، 5 HLL، 6 User."),
+M("Which of the following is NOT true about USB?",["It is an intelligent interface","It is self-configuring","Its data rate is lower than the parallel port","Its data rate is higher than the parallel port"],2,"USB أسرع من الـ parallel port."),
+M("What decimal value does 10111001 have in unsigned representation?",["57","185","-57","-185"],1,"128+32+16+8+1 = 185."),
+M("What decimal value does 10111010 have in two's complement?",["-58","58","-70","-186"],2,"اقلب البتات 01000101 = 69، ثم +1 ← 70 ← −70."),
+M("What is the octal equivalent of the decimal number 17.5?",["23.5","21.5","21.4","None of the above"],2,"17 = 21 ثماني، والكسر 0.5×8 = 4 ← 21.4."),
+M("The exponent part of the excess-16 representation of 54.5 is:",["11100110","00110","00011","10110"],3,"54.5 = 0.1101101×2⁶، الأُس 6+16 = 22 = 10110.")];
+//DOM
+const $=s=>document.querySelector(s),V=['home','tree','lessons','rules','bank','trace','cmp','fill','practice','mock'];
+function card(q,cb){const d=document.createElement('div');d.className='card';let h=`<div class="q">${q.t}</div>`;
+ h+=q.o?q.o.map((o,i)=>`<button class="o" data-i="${i}">${'abcd'[i]}. ${o}</button>`).join(''):`<div class="row"><input dir="ltr" placeholder="جوابك" autocomplete="off"><button class="b">تحقق</button><button class="g">الحل</button></div>`;
+ d.innerHTML=h+`<div class="sol" hidden>${q.s}</div>`;let done=0;const sol=d.querySelector('.sol');
+ const fin=ok=>{if(done)return;done=1;d.classList.add(ok?'ok':'no');sol.hidden=false;cb&&cb(ok)};
+ d.querySelectorAll('.o').forEach(b=>b.onclick=()=>{if(done)return;const i=+b.dataset.i;b.classList.add(i==q.a?'right':'wrong');d.querySelector(`[data-i="${q.a}"]`).classList.add('right');fin(i==q.a)});
+ const inp=d.querySelector('input');if(inp){d.querySelector('.b').onclick=()=>{if(done)return;if(q.a(inp.value))fin(1);else inp.classList.add('bad')};d.querySelector('.g').onclick=()=>{sol.hidden=false;fin(0)}}
+ return d}
+let cur,sc=0,ti,t0;const T={conv:'تحويل الأنظمة',rep:'تمثيل بإشارة',dec:'فك الإشارة',fp:'Floating point',fpd:'فك FP',km:'K-map',dm:'De Morgan',tr:'تتبّع الدائرة'};
+function pick(k){cur=k;$('#chips').innerHTML=Object.keys(T).map(x=>`<button class="${x==k?'on':''}" onclick="pick('${x}')">${T[x]}</button>`).join('');$('#pq').replaceChildren(card(G[k]()))}
+function mock(){clearInterval(ti);t0=Date.now();ti=setInterval(()=>{const s=(Date.now()-t0)/1000|0;$('#tm').textContent=(s/60|0)+':'+String(s%60).padStart(2,'0')},1000);sc=0;$('#sc').textContent=0;const qs=[...BANK].sort(()=>Math.random()-.5).slice(0,4).concat([G.dm(),G.tr(),G.conv(),G.rep(),G.fp(),G.km()]);$('#tot').textContent=qs.length;$('#mk').replaceChildren(...qs.map(q=>card(q,ok=>{if(ok)$('#sc').textContent=++sc})))}
+function show(){const h=(location.hash||'#home').slice(1),n=V.includes(h)?h:'home';V.forEach(v=>{$('#v-'+v).hidden=v!=n;$('nav [href="#'+v+'"]').classList.toggle('on',v==n)});
+ if(n=='practice'&&!cur)pick('conv');if(n=='mock'&&!$('#mk').children.length)mock();if(n=='mcq'&&!$('#ml').children.length)BANK.forEach(q=>$('#ml').append(card(q)));INIT[n]&&INIT[n]();tr();scrollTo(0,0)}
+const OP={AND:(p,q)=>p&q,OR:(p,q)=>p|q,NAND:(p,q)=>1-(p&q),NOR:(p,q)=>1-(p|q),XOR:(p,q)=>p^q};
+G.tr=()=>{const v={a:R(2),b:R(2),c:R(2)},K=Object.keys(OP),L=()=>{const n=P('abc'),i=R(2);return{n,s:n+(i?"'":''),v:i?1-v[n]:v[n]}},
+ g=()=>{const a=L();let b=L();while(b.n==a.n)b=L();const o=P(K);return{o,a,b,x:OP[o](a.v,b.v)}},
+ g1=g(),g2=g(),o=P(K),F=OP[o](g1.x,g2.x),d=(h,n)=>`${n} = ${h.a.s} ${h.o} ${h.b.s}`,e=(h,n)=>`${n} = ${h.a.v} ${h.o} ${h.b.v} = ${h.x}`;
+ return{t:`دائرة من 3 بوابات، والعلامة ' تعني NOT:<br>${C(d(g1,'G1'))}<br>${C(d(g2,'G2'))}<br>${C('F = G1 '+o+' G2')}<br>إذا ${C(`a=${v.a}, b=${v.b}, c=${v.c}`)} فما قيمة F؟`,a:s=>s.trim()==F,s:`${C(e(g1,'G1'))}<br>${C(e(g2,'G2'))}<br>${C(`F = ${g1.x} ${o} ${g2.x} = ${F}`)}`}};
+const kq=S=>{const f=solve(S).ch.map(term).join(' + ');return{t:`من امتحان سابق، اكتب الشكل المبسط:${km(S)}`,a:s=>nt(s)==nt(f),s:C('F = '+f)}};
+const KS=[[0,2,3,4,6],[3,4,6,7],[0,2,3,4,6,7],[1,2,3,5],[2,3,4,6,7],[0,1,4,5,6]];
+const BK=[["Represent -77.5 in 14-bit floating point (excess-16)","1 10111 10011011"],["Represent -30.375 in floating point (excess-16)","1 10101 11110011"],["Represent -42.75 in floating point (excess-16)","1 10110 10101011"],["Represent -26.75 in floating point (excess-16)","1 10101 11010110"],["Represent -79 in 8-bit Signed Magnitude","11001111"],["Represent -79 in 8-bit Two's Complement","10110001"],["Represent -92 in 8-bit One's Complement","10100011"],["Represent -92 in 8-bit Two's Complement","10100100"],["(168.5)<sub>10</sub> = ( ? )<sub>2</sub>","10101000.1",2],["(174.75)<sub>10</sub> = ( ? )<sub>2</sub>","10101110.11",2],["(11001101.11)<sub>2</sub> = ( ? )<sub>8</sub>","315.6",8],["(B5)<sub>16</sub> = ( ? )<sub>8</sub>","265",8],["(207.4)<sub>8</sub> = ( ? )<sub>16</sub>","87.8",16],["(1F.4)<sub>16</sub> = ( ? )<sub>10</sub>","31.25",10]];
+const TREE=[['الفصل 1',[['الوحدات: KB/MB وms/µs','#lessons'],['مستويات الكمبيوتر (0–6)','#rules'],['Ports وUSB والـ bus','#cmp'],['الاختصارات وهيئات المعايير','#cmp']]],['الفصل 2',[['تحويل الأنظمة','#practice'],['تمثيل SM/C1/C2 وفكها','#practice'],['Floating point excess-16','#practice']]],['الفصل 3',[['البوابات وجداول الحقيقة','#cmp'],['De Morgan وSOP','#practice'],['K-map','#practice'],['Adders وdecoder وmux','#cmp'],['Flip-flops وsequential','#cmp'],['تتبّع الدوائر','#trace']]],['مراجعة نهائية',[['أسئلة الامتحانات السابقة','#bank'],['أكمل الفراغ','#fill'],['اختبار تجريبي','#mock']]]];
+const CMP=[['SR مقابل JK مقابل D',['','SR','JK','D'],[['المدخلات','S, R','J, K','D'],['الحالة 00','Q(t)','Q(t)','—'],['الحالة 11','غير معرّفة',C("Q'(t)")+' (toggle)','—'],['الخرج','01 ← 0، 10 ← 1','01 ← 0، 10 ← 1',C('Q(t+1) = D')],['الاستخدام','أبسط flip-flop','يحل مشكلة SR','تخزين بت واحد، أساس الـ registers']]],
+['Half adder مقابل Full adder',['','Half','Full'],[['المدخلات','2 (x, y)','3 (x, y, Cin)'],['المخرجات','Sum, Carry','Sum, Carry'],['Sum',C('x⊕y'),'1 عند عدد فردي من الواحدات'],['Carry',C('xy'),'1 عند واحدين أو أكثر'],['صفوف الجدول','4','8']]],
+['SM مقابل C1 مقابل C2 (8-bit)',['','SM','C1','C2'],[['السالب','بدّل بت الإشارة','اقلب كل البتات','C1 + 1'],['الصفر','تمثيلان','تمثيلان','تمثيل واحد'],['المدى','−127 إلى 127','−127 إلى 127','−128 إلى 127']]],
+['Decoder مقابل Multiplexer',['','Decoder','Multiplexer'],[['المدخلات','n','2ⁿ + n selector'],['المخرجات','2ⁿ (واحد فعّال)','1'],['الفكرة','يفك الكود إلى خط واحد','يختار مدخلًا واحدًا'],['مثال','3 ← 8','8 ← 1 بـ 3 selectors']]],
+['Combinational مقابل Sequential',['','Combinational','Sequential'],[['الذاكرة','لا','نعم'],['الخرج يعتمد على','المدخلات الحالية فقط','المدخلات والحالة السابقة'],['Clock وfeedback','لا','نعم'],['أمثلة','gates، adders، decoder، mux','flip-flops، registers، counters']]],
+['Serial مقابل Parallel مقابل USB',['','Serial','Parallel','USB'],[['الخطوط','خط أو خطان','8 خطوط أو أكثر','serial ذكي'],['السرعة','منخفضة','أفضل','الأسرع'],['ميزات','—','—','self-configuring، plug and play']]],
+['البوابات',['البوابة','خرجها 1 عندما','خرجها 0 عندما'],[['AND','كل المدخلات 1','أي مدخل 0'],['OR','أي مدخل 1','كل المدخلات 0'],['NAND','أي مدخل 0','كل المدخلات 1'],['NOR','كل المدخلات 0','أي مدخل 1'],['XOR','المدخلان مختلفان','المدخلان متساويان']]],
+['الاختصارات',['الاختصار','المعنى'],[['SATA','Serial Advanced Technology Attachment'],['USB','Universal Serial Bus'],['PCI','Peripheral Component Interface'],['ISA','Instruction Set Architecture'],['IEEE','Institute of Electrical and Electronic Engineers'],['ITU','International Telecommunications Union'],['ANSI','American National Standards Institute'],['BSI','British Standards Institution'],['ISO','International Organization for Standardization'],['MSB / LSB','Most / Least Significant Bit'],['SOP','Sum Of Products'],['SR','Set / Reset']]]];
+const FILL=[['الـ byte يتكون من ___ بت','8'],['الـ nibble يتكون من ___ بت','4'],['الحرف K في KB يساوي 2 مرفوعة للأس ___','10'],['في Computer Level Hierarchy، الـ ISA (Machine level) هو المستوى رقم ___','2'],['مستوى الـ Digital logic رقمه ___','0'],['الـ ___ port يرسل البيانات كنبضات على خط أو خطين','serial'],['الـ ___ هو serial interface ذكي، self-configuring، ويدعم plug and play','USB'],['أعلى أولوية في تقييم Boolean expression للـ ___','parentheses|الأقواس|brackets'],['عدد الـ minterms في دالة بـ 3 متغيرات = ___','8'],['البوابة ___ خرجها 0 فقط إذا كانت كل مدخلاتها 1','NAND'],['البوابة ___ خرجها 1 فقط إذا كانت كل مدخلاتها 0','NOR'],['في SR flip-flop الحالة S=R=___ غير معرّفة','1'],['عند J=K=1 في JK flip-flop يتحول الخرج إلى Q\'(t)، أي أنه ___','toggle|يقلب|قلب'],['الـ ___ يحوّل n مدخل إلى 2ⁿ مخرج، واحد منها فقط فعّال','decoder'],['الـ ___ يختار مدخلًا واحدًا من 2ⁿ مدخل باستخدام n selector','multiplexer|mux'],['الـ counter من 4 flip-flops يعدّ حتى ___','1111'],['الـ bias في Floating point excess-16 هو ___','16'],['SOP اختصار لـ ___','sum of products|sop']];
+const nz=s=>s.toLowerCase().replace(/\s/g,'');
+BK.push(['(133)<sub>10</sub> = ( ? )<sub>2</sub>','10000101',2],['(0111001101)<sub>2</sub> = ( ? )<sub>8</sub>','715',8],['(D.4)<sub>16</sub> = ( ? )<sub>10</sub>','13.25',10],['(116.25)<sub>10</sub> = ( ? )<sub>2</sub>','1110100.01',2],['(3D.C)<sub>16</sub> = ( ? )<sub>10</sub>','61.75',10],['(138.5)<sub>10</sub> = ( ? )<sub>8</sub>','212.4',8],['(1011010.01)<sub>2</sub> = ( ? )<sub>8</sub>','132.2',8],['(10E.4)<sub>16</sub> = ( ? )<sub>10</sub>','270.25',10],['(23.125)<sub>10</sub> = ( ? )<sub>2</sub>','10111.001',2],['(101011110)<sub>2</sub> = ( ? )<sub>8</sub>','536',8],['(13B)<sub>16</sub> = ( ? )<sub>10</sub>','315',10],['(166.25)<sub>10</sub> = ( ? )<sub>2</sub>','10100110.01',2],['(A1.4)<sub>16</sub> = ( ? )<sub>8</sub>','241.2',8],['(124)<sub>10</sub> = ( ? )<sub>2</sub>','1111100',2],['(76)<sub>8</sub> = ( ? )<sub>16</sub>','3E',16],['(2F.8)<sub>16</sub> = ( ? )<sub>10</sub>','47.5',10],
+['Represent -62 in 8-bit Signed Magnitude','10111110'],['Represent -62 in 8-bit One’s Complement','11000001'],['Represent -62 in 8-bit Two’s Complement','11000010'],['Represent -43 in 8-bit Signed Magnitude','10101011'],['Represent -43 in 8-bit Two’s Complement','11010101'],['Represent -74 in 8-bit Signed Magnitude','11001010'],['Represent -74 in 8-bit Two’s Complement','10110110'],['Represent -77 in 8-bit One’s Complement','10110010'],['Represent -77 in 8-bit Two’s Complement','10110011'],
+['Represent -43 in floating point (excess-16)','1 10110 10101100'],['Represent -79 in floating point (excess-16)','1 10111 10011110'],['Represent 100.0 in floating point (excess-16)','0 10111 11001000'],['Represent 0.25 in floating point (excess-16)','0 01111 10000000'],['Represent 17.25 in floating point (excess-16)','0 10101 10001010'],['Represent 29.75 in floating point (excess-16)','0 10101 11101110'],['Decode to decimal (excess-16): 1 10101 10101101','-21.625']);
+let EN=0;const D=new Date('2026-11-03T00:00:00+03:00');
+function cd(){const ms=D-Date.now();if(ms<=0){$('#cd').textContent=EN?'Good luck!':'بالتوفيق في الميد!';return}const d=ms/864e5|0,h=ms%864e5/36e5|0,m=ms%36e5/6e4|0;$('#cd').innerHTML=EN?`Midterm in <b>${d}</b> d <b>${h}</b> h <b>${m}</b> min`:`باقي على الميد <b>${d}</b> يوم و <b>${h}</b> ساعة و <b>${m}</b> دقيقة`}
+const EU={'البداية':'Home','TM103 — مراجعة الميد (الفصول 1–3)':'TM103: Midterm review (Chapters 1–3)','TM103 · مراجعة الميد':'TM103 · Midterm review','شجرة المذاكرة':'Study tree','الدروس':'Lessons','مرجع سريع':'Quick reference','قواعد سريعة':'Quick reference','بنك الأسئلة':'Question bank','تتبّع الدوائر':'Circuit tracing','قارن بين':'Compare','أكمل الفراغ':'Fill the blank','اكتب الحل':'Write the answer','تدرّب':'Practice','اختبار تجريبي':'Mock test','تحقق':'Check','الحل':'Solution','سؤال جديد ↻':'New question ↻','أسئلة جديدة ↻':'New questions ↻','اختبار جديد ↻':'New test ↻','تحويل الأنظمة':'Base conversion','تمثيل بإشارة':'Signed representation','فك الإشارة':'Decode signed','فك FP':'Decode FP','تتبّع الدائرة':'Trace circuit'};
+function tr(){document.querySelectorAll('nav a,header b,h1,button:not(#lg)').forEach(e=>{const k=e.dataset.ar||e.textContent.trim();if(!(k in EU))return;e.dataset.ar=k;const v=EN?EU[k]:k;if(e.textContent!==v)e.textContent=v})}
+function lang(){EN=!EN;$('#lg').textContent=EN?'العربية':'English';document.documentElement.lang=EN?'en':'ar';tr();cd()}
+const LS=[
+['1) الوحدات (الفصل 1)',`مثال: ملف 100KB بالبت؟ السعة بقوى 2: 100×2¹⁰ بايت × 8 بت = <code>819,200</code> بت.<br>مثال: 0.15 ms بالـ µs؟ اضرب في 10³ ← <code>150 µs = 15×10¹</code>.<br>القاعدة: ms ← µs اضرب في 10³، والعكس بالقسمة.`],
+['2) تحويل الأنظمة',`<code>(174.75)₁₀</code> إلى ثنائي: 174 ← <code>10101110</code>. الكسر: 0.75×2 = 1.5 (1)، 0.5×2 = 1.0 (1) ← <code>.11</code>. الناتج <code>10101110.11</code>.<br>إلى ثماني: <code>010 101 110 . 110</code> = <code>256.6</code>. إلى سداسي عشري: <code>1010 1110 . 1100</code> = <code>AE.C</code>.<br>سداسي عشري ← ثماني عبر الثنائي: <code>(B5)₁₆ = 10110101 = 010 110 101 = (265)₈</code>.`],
+['3) الأعداد بإشارة',`مثال −92: <code>92 = 01011100</code>. SM: <code>11011100</code>. C1 (اقلب): <code>10100011</code>. C2 (C1+1): <code>10100100</code>.<br>فك <code>11100011</code>: SM ← −(1100011 = 99) = −99. C1 ← اقلب إلى <code>00011100</code> = 28 ← −28. C2 ← 28+1 ← −29.`],
+['4) Floating point',`تمثيل −42.75: <code>101010.11</code> = 0.10101011×2⁶. الأُس 6+16 = 22 = <code>10110</code>. الجواب <code>1 10110 10101011</code>.<br>فك <code>0 10101 11101110</code>: الأُس 21−16 = 5 ← 0.11101110×2⁵ = <code>11101.11</code> = 29.75.`],
+['5) De Morgan',`متمم <code>ab' + a'c</code>: متمم كل حد ثم AND بينهما ← <code>(a'+b)(a+c')</code>.<br>للتحقق أن F وG متمّمان: ابنِ جدول الحقيقة للدالتين، فإذا كانت كل الأسطر متعاكسة فهما متمّمان.`],
+['6) SOP وK-map',`F = 1 عند abc = 000، 001، 100، 101، 110 ← SOP = <code>a'b'c' + a'b'c + ab'c' + ab'c + abc'</code>.<br>في الـ K-map: مجموعة الأربعة <code>b'</code> (000، 001، 100، 101) ومجموعة <code>ac'</code> (100 و110) ← <code>F = b' + ac'</code>.`],
+['7) قراءة الدوائر',`اكتب خرج كل بوابة من اليسار لليمين. مثال: Gate 2 = <code>(a'·c)'</code> وGate 3 = <code>ab ⊕ b</code> وF = OR بينهما. عند a=b=c=0: Gate 2 = (1·0)' = 1 ← F = 1.<br>Full adder عند x=1، y=1، Cin=0: Sum = 0 وCarry = 1.<br>Mux بـ 60 مدخل يحتاج 6 selectors، وdecoder بـ 64 مخرج له 6 مدخلات.`],
+['8) Flip-flops',`SR: <code>S=1, R=0</code> ← 1، <code>S=0, R=1</code> ← 0، <code>00</code> ← يحتفظ، <code>11</code> ← غير معرّف. JK: نفس الشيء وعند <code>11</code> يصبح <code>Q'(t)</code>. مثال: JK مع J=0 وK=1 ← الخرج 0.<br>JK يُفضَّل لأنه يلغي الحالة غير المعرّفة. D: <code>Q(t+1) = D</code>. Counter من n flip-flop له 2ⁿ حالة.`]];
+const INIT={
+lessons(){if($('#ls').children.length)return;$('#ls').innerHTML=LS.map(([t,h],i)=>`<details${i?'':' open'}><summary>${t}</summary><p>${h}</p></details>`).join('')},
+tree(){if($('#tr').children.length)return;let st={};try{st=JSON.parse(localStorage.getItem('tm103')||'{}')}catch(e){}
+ const N=TREE.reduce((a,[,l])=>a+l.length,0),upd=()=>$('#pg').textContent=Object.values(st).filter(Boolean).length+' / '+N;
+ $('#tr').innerHTML=TREE.map(([h,l])=>`<div class="card"><b>${h}</b>${l.map(([t,k])=>`<label style="display:block"><input type="checkbox" data-k="${t}" style="width:auto;flex:none;margin-inline-end:8px;padding:0"> ${t} <a href="${k}">←</a></label>`).join('')}</div>`).join('');
+ $('#tr').querySelectorAll('input').forEach(i=>{i.checked=!!st[i.dataset.k];i.onchange=()=>{st[i.dataset.k]=i.checked;upd();try{localStorage.setItem('tm103',JSON.stringify(st))}catch(e){}}});upd()},
+cmp(){if($('#cp').children.length)return;$('#cp').innerHTML=CMP.map(([t,h,r])=>`<h2>${t}</h2><div class="box sc"><table><tr>${h.map(x=>`<th>${x}</th>`).join('')}</tr>${r.map(w=>`<tr>${w.map(x=>`<td>${x}</td>`).join('')}</tr>`).join('')}</table></div>`).join('')},
+fill(){if($('#fl').children.length)return;FILL.forEach(([t,a])=>$('#fl').append(card({t,a:s=>a.split('|').some(x=>nz(x)==nz(s)),s:'الجواب: '+C(a.split('|')[0])})))},
+trace(f){if($('#tq').children.length&&!f)return;$('#tq').replaceChildren(...[0,1,2].map(()=>card(G.tr())))},
+bank(){if($('#bk').children.length)return;BANK.forEach(q=>$('#bm').append(card(q)));BK.forEach(([t,a,b])=>$('#bk').append(card({t:`<div dir="ltr">${t}</div>`,a:x=>b?okc(x,b,fb(a,b)):x.replace(/[\s()]/g,'')==a.replace(/\s/g,''),s:'الجواب: '+C(a)})));KS.forEach(S=>$('#bk').append(card(kq(S))))}};
+addEventListener('hashchange',show);show();cd();setInterval(cd,30000);new MutationObserver(()=>EN&&tr()).observe(document.body,{childList:true,subtree:true});
+</script></body></html>
